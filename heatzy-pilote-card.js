@@ -6,20 +6,20 @@ import {
 } from "https://unpkg.com/lit-element@2.0.1/lit-element.js?module";
 
 const translation = {
-  en: {
+  de: {
     modes: {
-      "none": "None",
-      "away": "Away",
+      "none": "Aus",
+      "away": "Frostschutz",
       "eco": "Eco",
-      "comfort": "Comfort"
+      "comfort": "Komfort"
     }
   },
-  fr: {
+  en: {
     modes: {
       "none": "Off",
-      "away": "Hors-gel",
+      "away": "Anti Freeze",
       "eco": "Eco",
-      "comfort": "Confort"
+      "comfort": "Comfort"
     }
   }
 };
@@ -156,9 +156,9 @@ class HeatzyPiloteCard extends LitElement {
     
     //translation is supported
     if(config.language == undefined){
-      config.language = "en"
+      config.language = "de"
     } else if(translation[config.language]==undefined){
-      throw new Error(`Supported languages are only ["en", "fr"]. "${config.language}" is not a supported language.`);
+      throw new Error(`Supported languages are only ["en", "de"]. "${config.language}" is not a supported language.`);
     }
     
     this.config = config;
